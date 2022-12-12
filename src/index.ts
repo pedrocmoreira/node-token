@@ -1,11 +1,11 @@
 import 'express-async-errors'
 import express from 'express'
-import { AppSourceData } from './data-source'
+import { AppDataSource } from './data-source'
 import routes from './routes'
 import { errorMiddleware } from './middlewares/error'
 
 
-AppSourceData.initialize().then(() => {
+AppDataSource.initialize().then(() => {
   const app = express()
 
   app.use(express.json())
