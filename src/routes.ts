@@ -2,9 +2,10 @@ import { Router } from "express";
 import { LoginController } from "./controllers/LoginController";
 import { UserController } from "./controllers/UserController";
 
-const routes = Router()
+const routes = Router();
 
-routes.post('/user', new UserController().create);
-routes.post('/login', new LoginController().create);
+routes.post("/user", new UserController().create);
+routes.post("/login", new LoginController().create);
+routes.get("/profile", new LoginController().getProfile);
 
-export default routes
+export default routes;
